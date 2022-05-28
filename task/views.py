@@ -6,7 +6,7 @@ from .models import Task
 # Create your views here.
 def list_task(request):
     tasks = Task.objects.all()
-    return render(request,'list_task.html', {'tasks':tasks})
+    return render(request,'index.html', {'tasks':tasks})
 
 def create_task(request):
     tasksave = Task(title=request.POST['title'], description=request.POST['description'])
